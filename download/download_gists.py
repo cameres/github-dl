@@ -3,6 +3,22 @@ import re
 import requests as r
 
 def download_gists(dst, gists, extension):
+    """
+    handles downloading paginated gists
+
+    Arguments
+    ---------
+    dst : string
+        folder to write gists to
+
+    gists : github.PaginatedList.PaginatedList
+        gist objects used to download raw files
+
+    extension : string
+        string extension for downloading gists
+        that contain specific files
+        ex: ipynb
+    """
     if not os.path.isdir(dst):
         os.makedirs(dst)
 

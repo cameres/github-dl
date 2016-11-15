@@ -1,6 +1,3 @@
 def public_gists(g):
-    """handle grabbing all public gists.
-
-    entry point for when user provides 'gists' command
-    """
+    """handle grabbing all public gists"""
     return g.get_gists()

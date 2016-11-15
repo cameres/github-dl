@@ -15,7 +15,7 @@ from download import download_repos
 @click.option('--password', help='your github password')
 @click.option('--token', help='your github token')
 @click.option('--config', help='directory to a configuration file')
-def github_dl(queries, dst, username, password, token, config, ):
+def github_dl(queries, dst, username, password, token, config):
     g = setup_github(username, password, token, config)
     for query in queries:
         # todo: can also pass sort, order, qualifiers...
