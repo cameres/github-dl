@@ -1,5 +1,4 @@
 import click
-import re
 
 from download import setup_github
 from download import public_gists
@@ -7,6 +6,7 @@ from download import user_gists
 from download import download_gists
 from download import search_repos
 from download import download_repos
+
 
 @click.command()
 @click.argument('queries', nargs=-1)
@@ -23,6 +23,7 @@ def github_dl(queries, dst, username, password, token, config):
         # 'machine learning language:jupyter-notebook size:<1000'
         repos = search_repos(g, query)
         download_repos(dst, repos)
+
 
 @click.command()
 @click.argument('users', nargs=-1)

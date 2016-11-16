@@ -2,6 +2,7 @@ import os
 import re
 import requests as r
 
+
 def download_gists(dst, gists, extension):
     """
     handles downloading paginated gists
@@ -23,7 +24,7 @@ def download_gists(dst, gists, extension):
         os.makedirs(dst)
 
     # create regular expression for matching end of file
-    pattern = r'.*\.%s$' %(extension) if extension else None
+    pattern = r'.*\.%s$' % (extension) if extension else None
 
     for gist in gists:
         # download entire gist e.g. could have json files to use

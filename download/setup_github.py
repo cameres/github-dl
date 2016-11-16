@@ -3,6 +3,7 @@ import json
 
 from github import Github
 
+
 def setup_github(username, password, token, config):
     """
     setup github object given credentials
@@ -24,7 +25,7 @@ def setup_github(username, password, token, config):
     Returns
     -------
     Github instance : Github
-        configured connection to github 
+        configured connection to github
     """
     if(config):
         config = json.load(open(config, "r"))
@@ -37,6 +38,10 @@ def setup_github(username, password, token, config):
     if(token):
         return Github(token, per_page=100)
     else:
-        username = username if username else raw_input("username:")
+        try:
+            input = raw_input
+        except NameError:
+            pass
+        username = username if username else input("username:")
         password = password if password else getpass.getpass("password:")
         return Github(username, password, per_page=100)
