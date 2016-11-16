@@ -1,5 +1,6 @@
 import getpass
 import json
+import click
 
 from github import Github
 
@@ -38,10 +39,6 @@ def setup_github(username, password, token, config):
     if(token):
         return Github(token, per_page=100)
     else:
-        try:
-            input = raw_input
-        except NameError:
-            pass
-        username = username if username else input("username:")
-        password = password if password else getpass.getpass("password:")
+        username = click.prompt('username', type=str)
+        password = password if password else getpass.getpass("password: ")
         return Github(username, password, per_page=100)
