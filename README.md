@@ -1,5 +1,8 @@
 # github-dl
 
+[![Build Status](https://travis-ci.org/cameres/github-dl.svg?branch=master)](https://travis-ci.org/cameres/github-dl)
+[![codecov](https://codecov.io/gh/cameres/github-dl/branch/master/graph/badge.svg)](https://codecov.io/gh/cameres/github-dl)
+
 github-dl is a lightweight command line tool for downloading repositories from **[github.com](http://github.com)** and gists from **[gist.github.com](http://gist.github.com)**. github-dl has been tested on
 python 2.7.12 and python 3.5.2.
 
