@@ -3,7 +3,3 @@ omit =
   tests/*
   .tox/*
   setup.py
-
-[paths]
-source =
-   src/jupyter_spark
