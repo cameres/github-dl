@@ -89,5 +89,20 @@ docs/_build/
 # PyBuilder
 target/
 
+#### joe made this: http://goel.io/joe
+#### virtualenv ####
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
 notebooks/
 config.json

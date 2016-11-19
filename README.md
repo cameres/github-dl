@@ -7,6 +7,13 @@ github-dl is a lightweight command line tool for downloading repositories from *
 python 2.7.12 and python 3.5.2.
 
 ## Installation
+The project was recently added to PYPI. Feel free to submit an issue if there are any issues with downloading via the command below...
+
+```bash
+pip install github-dl
+```
+
+## Installation (Development)
 Install the project by downloading the project as a zip file or cloning the repository. After downloading the source, run the following command to install in the root directory of the project...
 
 ```bash
@@ -24,7 +31,6 @@ github-dl's functionality is currently fairly limited, but the following functio
 | `--password` | github password for credentials |
 | `--token` | github token for credentials |
 | `--config` | directory to a configuration file |
-| `--extension` | file extension to download ex: ipynb |
 
 ### usage specific for `$ github-dl`
 
