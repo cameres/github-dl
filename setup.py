@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='github-dl',
-    version='0.1a6',
+    version='0.1a9',
     description='a command line tool for downloading repositories and gists',
     url='https://github.com/cameres/github-dl',
     author='Connor Ameres',
@@ -16,6 +16,7 @@ setup(
         'Programming Language :: Python :: 3.5'
     ],
     keywords='github gists download',
+    py_modules=['github_dl'],
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     install_requires=[
         'click',
@@ -26,6 +27,6 @@ setup(
     entry_points='''
         [console_scripts]
         github-dl=github_dl:github_dl
-        gist-dl=github_dl:gist_dl
+            gist-dl=github_dl:gist_dl
     '''
 )
