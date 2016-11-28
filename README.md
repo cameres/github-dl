@@ -30,7 +30,19 @@ github-dl's functionality is currently fairly limited, but the following functio
 | `--username` | github username for credentials  |
 | `--password` | github password for credentials |
 | `--token` | github token for credentials |
-| `--config` | directory to a configuration file |
+| `--config` | filename for configuration file |
+
+#### config file
+The config file is an optional file that stores github credentials in the following **required** format.
+
+```json
+{
+  "username" : "username",
+  "password" : "secret_password",
+  "token" : "secret_token"
+}
+```
+**NOTE: ** None of the credentials are required in the configuration file and token has the highest priority.
 
 ### usage specific for `$ github-dl`
 

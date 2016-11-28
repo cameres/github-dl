@@ -38,19 +38,36 @@ functionality is supported
 usage for both commands
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------------------------------+-------------------------------------+
-| command line argument/option   | functionality                       |
-+================================+=====================================+
-| ``--help``                     | list arguments/options for tool     |
-+--------------------------------+-------------------------------------+
-| ``--username``                 | github username for credentials     |
-+--------------------------------+-------------------------------------+
-| ``--password``                 | github password for credentials     |
-+--------------------------------+-------------------------------------+
-| ``--token``                    | github token for credentials        |
-+--------------------------------+-------------------------------------+
-| ``--config``                   | directory to a configuration file   |
-+--------------------------------+-------------------------------------+
++--------------------------------+-----------------------------------+
+| command line argument/option   | functionality                     |
++================================+===================================+
+| ``--help``                     | list arguments/options for tool   |
++--------------------------------+-----------------------------------+
+| ``--username``                 | github username for credentials   |
++--------------------------------+-----------------------------------+
+| ``--password``                 | github password for credentials   |
++--------------------------------+-----------------------------------+
+| ``--token``                    | github token for credentials      |
++--------------------------------+-----------------------------------+
+| ``--config``                   | filename for configuration file   |
++--------------------------------+-----------------------------------+
+
+config file
+^^^^^^^^^^^
+
+The config file is an optional file that stores github credentials the
+following format is required...
+
+.. code:: json
+
+    {
+      "username" : "username",
+      "password" : "secret_password",
+      "token" : "secret_token"
+    }
+
+**NOTE: ** None of the credentials are required in the configuration
+file and token has the highest priority.
 
 usage specific for ``$ github-dl``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
