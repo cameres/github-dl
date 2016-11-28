@@ -55,8 +55,8 @@ usage for both commands
 config file
 ^^^^^^^^^^^
 
-The config file is an optional file that stores github credentials the
-following format is required...
+The config file is an optional file that stores github credentials in
+the following **required** format.
 
 .. code:: json
 
