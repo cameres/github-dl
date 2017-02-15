@@ -6,6 +6,12 @@
 github-dl is a lightweight command line tool for downloading repositories from **[github.com](http://github.com)** and gists from **[gist.github.com](http://gist.github.com)**. github-dl has been tested on
 python 2.7.12 and python 3.5.2.
 
+#### github-dl
+![gifs/github-dl.gif](gifs/github-dl.gif)
+
+#### gist-dl
+![gifs/gist-dl.gif](gifs/gist-dl.gif)
+
 ## Installation
 The project was recently added to PYPI. Feel free to submit an issue if there are any issues with downloading via the command below...
 
