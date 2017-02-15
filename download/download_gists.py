@@ -32,9 +32,9 @@ def download_gists(dst, gists, extension):
         if not pattern or any([re.match(pattern, file_name) for file_name in file_names]):
             # download the files
             owner = gist.owner.login if gist.owner else 'anonymous'
+            print("downloading gist from {}".format(owner))
             id = gist.id
             file_directory = dst + '/' + owner + '/' + id + '/'
-
             if not os.path.isdir(file_directory):
                 os.makedirs(file_directory)
             for (file_name, gist_file) in gist.files.items():
@@ -45,6 +45,7 @@ def download_gists(dst, gists, extension):
 
                 # TODO: handle overwriting files
                 file = open(file_directory + file_name, 'wb')
+                print("\t writing {} to {}".format(file_name, file_directory))
                 # TODO: make sure to encode correctly
                 file.write(contents.encode('utf8', 'replace'))
                 file.close()

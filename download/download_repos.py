@@ -16,6 +16,7 @@ def download_repos(dst, repos):
     for repo in repos:
         try:
             # we can clone the projects, but we only want to download small projects
+            print("downloading repo {}/{}".format(repo.owner.login, repo.name))
             git.repo.base.Repo.clone_from(repo.git_url, dst + '/' + repo.full_name)
         except git.exc.GitCommandError as e:
             # if the repositority already exists we want to move on
